@@ -1,0 +1,140 @@
+ /* Слайдер */
+ .slick-slider{}
+
+ /* Слайдер запущен */
+ .slick-slider.slick-initialized{}
+
+ /* Слайдер с точками */
+ .slick-slider.slick-dotted{}
+
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide{}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+
+/* Слайд основной */
+.slick-slide.slick-current{}
+
+/* Слайд по центру */
+.slick-slide.slick-center{}
+
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+
+/* Стрелка */
+.slick-arrow{}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+
+/* Активная точка */
+.slick-dots li.slick-active{}
+
+/* Элемент точки */
+.slick-dots li button{} 
+
+
+/* конкретний слайдер 1 */
+.slider{
+	position: relative;
+}
+
+
+.slider .slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider .slick-dots li{
+	list-style: none;
+	margin: 0px 10px;
+
+}
+.slider .slick-dots button{
+	font-size: 0;
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius: 50%;
+} 
+
+.slider .slick-dots li.slick-active button{
+	background-color: transparent;
+	border-radius: 1px solid #fff;
+}
+
+
+.slider_item{
+	transition: all 0.3s ease 0s;
+	opacity: 0.4;
+	text-align: center;
+}
+.slick-center{
+	z-index: 300;
+	opacity: 1;
+}
+
+
+.slider .slick-arrow {
+	position: absolute;
+	z-index: 300;
+	top: 50%;
+	margin: -30px 0px 0px 0px;
+	font-size: 0;
+
+
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top: 5px solid white;
+	border-right: 5px solid white;
+	border-left:0px solid white;
+	border-bottom:0px solid white;
+	box-shadow: 0 0 0 lightgray;
+	transition: all 200ms ease;}
+	
+.slider .slick-arrow.slick-prev {
+	left: 0;
+	transform: translate3d(0,-50%,0) rotateZ(-135deg);}
+
+.slider .slick-arrow.slick-next {
+	right: 0;
+	transform: translate3d(0,-50%,0) rotateZ(45deg);
+}
+	
+.slider .slick-arrow:hover {
+	border-color: green;
+	box-shadow: 5px -5px 0 #28AD00;
+}
+	
+.slider .slick-arrow:before { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-40%,-60%) rotateZ(45deg);
+	width: 200%;
+	height: 200%;
+}
