@@ -39,12 +39,50 @@ $(document).ready(function(){
 		vertical: false,
 		verticalSwiping:false,
 		*/
-
-
-
-
 	});
 });
+
+$( function() {
+	$( "#accordion" ).accordion();
+	$( "#sortable" ).sortable();
+
+	$('.main-carousel').flickity({
+	  // options
+	  cellAlign: 'left',
+	  contain: true
+	});
+
+	function runEffect() {
+	 var selectedEffect = $( "#effectTypes" ).val();
+	 var options = {};
+		if ( selectedEffect === "scale" ) {
+			options = { percent: 50 };
+		} else if ( selectedEffect === "transfer" ) {
+			options = { to: "#button", className: "ui-effects-transfer" };
+		} else if ( selectedEffect === "size" ) {
+			options = { to: { width: 200, height: 60 } };
+		}
+		$( "#effect" ).effect( selectedEffect, options, 500, callback );
+	};
+	function callback() {
+		setTimeout(function() {
+			$( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+		}, 1000 );
+	};
+
+	$( "#button" ).on( "click", function() {
+		runEffect();
+	return false;
+	});
+});
+
+
+
+
+
+$( function() {
+
+  } );
 
 function myFunction(){
 var winScroll = document.body.scrollTop || document.documentElement.scrollTop;

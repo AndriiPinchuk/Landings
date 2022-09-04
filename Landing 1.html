@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 	<head>
 
 		<title>Landing I</title>	
 		<link rel="icon" type="image/x-icon" href="img/favicon.png">
+
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,28 +13,34 @@
 		<link rel="stylesheet" href="styles/l1.css">
 		<!--Slick CSS-->
 		<link rel="stylesheet" href="styles/Slick+.css">
+		<!--flickity CSS-->
+		<link rel="stylesheet" href="styles/flickity.css">
 		<!--font awesome CSS-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
+
+
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 	</head>
 
 	<body>
 
-		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 		<script src="js\slick.min.js"></script>
 		<script src="js\scroll.js"></script>
+		<script src="js\flickity.pkgd.min.js"></script>
 
 		<div class="header" id="MainTop">
 					<div class="slider">
 						<div class="slider_item">
-							<img data-lazy="img/web-dev.png" alt="">
+							<img src="img/web-dev.png">
 						</div>
 						<div class="slider_item">
-							<img data-lazy="img/384.jpg" alt="">
+							<img src="img/384.jpg">
 						</div>
 						<div class="slider_item">
-							<img data-lazy="img/154.jpg" alt="">
+							<img src="img/154.jpg">
 						</div>
 					</div>		
 		</div>
@@ -40,10 +48,10 @@
 		<div class="topNav" id="navbar">
 			<div>
 			<ul class="topNav" >
-			  <li><a class="active" href="#home" ><i class="fa fa-fw fa-home"></i> <i id="ii">Home</i></a></li>
-			  <li><a href="#news"><i class="fa fa-fw fa-envelope"></i> <i id="ii"> News</i></a></li>
-			  <li><a href="#contact"><i class="fa fa-fw fa-user"></i> <i id="ii"> Contact</i></a></li>
-			  <li><a href="#services"><i class="fa fa-fw fa-wrench"></i> <i id="ii"> Services</i></a></li>
+			  <li><a class="active" href="#home" ><i class="fa fa-fw fa-home"></i> <i class="ii">Home</i></a></li>
+			  <li><a href="#news"><i class="fa fa-fw fa-envelope"></i> <i class="ii"> News</i></a></li>
+			  <li><a href="#contact"><i class="fa fa-fw fa-user"></i> <i class="ii"> Contact</i></a></li>
+			  <li><a href="#services"><i class="fa fa-fw fa-wrench"></i> <i class="ii"> Services</i></a></li>
 			  
 
 			</ul></div>
@@ -56,8 +64,24 @@
 			<div class="row">
 			  <div class="column side">
 			    <h2>Side</h2>
-			    <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+			    <div class="main-carousel">
+					<div class="carousel-cell">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+						</p>
+					</div>
+					<div class="carousel-cell">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+						</p>
+					</div>
+					<div class="carousel-cell">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+						</p>
+					</div>
 			  </div>
+			</div>
 			  
 			  <div class="column middle">
 			    <h2>Main Content</h2>
@@ -85,9 +109,19 @@
 			  </div>
 			  
 			  <div class="column middle">
-			    <h2>Main Content</h2>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+			    <h2>Sortable Content</h2>
+
+					<ul id="sortable">
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Lorem ipsum dolor sit amet,</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>illum definitiones no quo,</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>maluisset concludaturque et eum,</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>altera fabulas ut quo.</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span> Atqui causae gloriatur ius te,</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>id agam omnis evertitur eum.</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Affert laboramus repudiandae nec et.</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Inciderint efficiantur his ad.</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Eum no molestiae voluptatibus.</li>
+					</ul>
 			  </div>
 			  
 			  <div class="column side">
@@ -107,9 +141,55 @@
 			  </div>
 			  
 			  <div class="column middle">
-			    <h2>Main Content</h2>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+			    <h2>Accordion Content</h2>
+			    <div id="accordion" class="upSection">
+				  <h3>Section 1</h3>
+				  <div class="Section">
+				    <p>
+				    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+				    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+				    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+				    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+				    </p>
+				  </div>
+				  <h3>Section 2</h3>
+				  <div class="Section">
+				    <p>
+				    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+				    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+				    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+				    suscipit faucibus urna.
+				    </p>
+				  </div>
+				  <h3>Section 3</h3>
+				  <div class="Section">
+				    <p>
+				    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+				    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+				    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+				    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+				    </p>
+				    <ul>
+				      <li>List item one</li>
+				      <li>List item two</li>
+				      <li>List item three</li>
+				    </ul>
+				  </div>
+				  <h3>Section 4</h3>
+				  <div class="Section">
+				    <p>
+				    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+				    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+				    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+				    mauris vel est.
+				    </p>
+				    <p>
+				    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+				    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+				    inceptos himenaeos.
+				    </p>
+				  </div>
+				</div>
 			  </div>
 			  
 			  <div class="column side">
@@ -130,9 +210,33 @@
 			  </div>
 
 		<div class="column middle">
-			    <h2>Main Content</h2>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+			    <h2>Content effects</h2>
+			   <div class="toggler">
+					<div id="effect" class="ui-widget-content ui-corner-all">
+					    <h3 class="ui-widget-header ui-corner-all">Effect</h3>
+					    <p class="tog">
+					      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+					    </p>
+					</div>
+				</div>
+						 
+				<select name="effects" id="effectTypes">
+				  <option value="blind">Blind</option>
+				  <option value="bounce">Bounce</option>
+				  <option value="clip">Clip</option>
+				  <option value="drop">Drop</option>
+				  <option value="explode">Explode</option>
+				  <option value="fade">Fade</option>
+				  <option value="fold">Fold</option>
+				  <option value="highlight">Highlight</option>
+				  <option value="puff">Puff</option>
+				  <option value="pulsate">Pulsate</option>
+				  <option value="scale">Scale</option>
+				  <option value="shake">Shake</option>
+				  <option value="size">Size</option>
+				  <option value="slide">Slide</option>
+				</select>
+				<button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
 			  </div>
 			  <div class="column side">
 			    <h2>Side</h2>
